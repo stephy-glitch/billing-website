@@ -96,20 +96,20 @@ function addItem(name, price) {
 }
 
 // Remove item from order
-function removeItem(index) {
-    order.splice(index, 1);
-    updateOrderDisplay();
-    calculateTotal();
-}
+// function removeItem(index) {
+//     order.splice(index, 1);
+//     updateOrderDisplay();
+//     calculateTotal();
+// }
 
 // Update quantity
 function updateQuantity(index, change) {
     order[index].quantity += change;
     
-    if (order[index].quantity <= 0) {
-        removeItem(index);
-        return;
-    }
+    // if (order[index].quantity <= 0) {
+    //     removeItem(index);
+    //     return;
+    // }
     
     order[index].total = order[index].quantity * order[index].price;
     updateOrderDisplay();
@@ -671,9 +671,9 @@ function deleteMenuItem(index) {
         const menuItems = document.querySelectorAll('.menu-item');
         menuItems.forEach(item => {
             const nameSpan = item.querySelector('.item-name');
-            if (nameSpan.textContent === menuItem.name) {
-                item.remove();
-            }
+            // if (nameSpan.textContent === menuItem.name) {
+            //     item.remove();
+            // }
         });
         
         renderMenuEdit();
@@ -701,7 +701,7 @@ function switchTab(tab) {
     const exportBtn = document.getElementById('exportProductBtn');
     const tabs = document.querySelectorAll('.tab-btn');
     
-    tabs.forEach(t => t.classList.remove('active'));
+    // tabs.forEach(t => t.classList.remove('active'));
     
     if (tab === 'eod') {
         eodContent.style.display = 'block';
@@ -1283,7 +1283,7 @@ function closeCSVModal() {
     const modal = document.getElementById('csvModal');
     if (modal) {
         modal.style.display = 'none';
-        modal.remove();
+        // modal.remove();
     }
 }
 
@@ -1321,7 +1321,7 @@ function updateOrderDisplay() {
                 <span class="quantity">${item.quantity}</span>
                 <button class="quantity-btn" onclick="updateQuantity(${index}, 1)">+</button>
             </div>
-            <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+            // <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
         </div>
     `).join('');
 }
@@ -1376,7 +1376,7 @@ function downloadCSV(csvContent, filename) {
     link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();
-    document.body.removeChild(link);
+    // document.body.removeChild(link);
 }
 
 function exportBillsToCSV() {
@@ -1652,3 +1652,4 @@ if (savedMenuData) {
 
 updateOrderDisplay();
 calculateTotal();
+
