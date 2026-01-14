@@ -8,7 +8,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
-    padding: 20px;
+    padding: 4px;
 }
 
 .container {
@@ -143,7 +143,7 @@ header h1 {
 
 .item-name {
     flex: 1;
-    font-weight: 500;
+    font-weight: bold;
     color: #333;
 }
 
@@ -962,6 +962,7 @@ header h1 {
         max-height: none;
     }
 }
+
 
 
 
