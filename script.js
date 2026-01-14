@@ -701,7 +701,7 @@ function switchTab(tab) {
     const exportBtn = document.getElementById('exportProductBtn');
     const tabs = document.querySelectorAll('.tab-btn');
     
-    // tabs.forEach(t => t.classList.remove('active'));
+   // tabs.forEach(t => t.classList.remove('active'));
     
     if (tab === 'eod') {
         eodContent.style.display = 'block';
@@ -1283,7 +1283,7 @@ function closeCSVModal() {
     const modal = document.getElementById('csvModal');
     if (modal) {
         modal.style.display = 'none';
-        // modal.remove();
+  //      modal.remove();
     }
 }
 
@@ -1321,7 +1321,6 @@ function updateOrderDisplay() {
                 <span class="quantity">${item.quantity}</span>
                 <button class="quantity-btn" onclick="updateQuantity(${index}, 1)">+</button>
             </div>
-            // <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
         </div>
     `).join('');
 }
@@ -1376,7 +1375,7 @@ function downloadCSV(csvContent, filename) {
     link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();
-    // document.body.removeChild(link);
+//
 }
 
 function exportBillsToCSV() {
@@ -1652,4 +1651,3 @@ if (savedMenuData) {
 
 updateOrderDisplay();
 calculateTotal();
-
