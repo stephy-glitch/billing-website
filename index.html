@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChaatGPT - Billing System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ChaatGPT</h1>
+            <p class="tagline">Guaranteed Perfect Taste</p>
+            <div class="header-actions">
+                <button class="btn-header" onclick="openMenuEdit()">Edit Menu</button>
+                <button class="btn-header" onclick="openEODReport()">EOD Report</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Menu Section -->
+            <div class="menu-section">
+                <h2>Menu</h2>
+                
+                <!-- SANDWICH -->
+                <div class="menu-category">
+                    <h3 class="category-header">SANDWICH</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Veg Sandwich</span>
+                            <span class="item-price">₹49</span>
+                            <button class="add-btn" onclick="addItem('Veg Sandwich', 49)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Cheese Corn Sandwich</span>
+                            <span class="item-price">₹69</span>
+                            <button class="add-btn" onclick="addItem('Cheese Corn Sandwich', 69)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Paneer Sandwich</span>
+                            <span class="item-price">₹79</span>
+                            <button class="add-btn" onclick="addItem('Paneer Sandwich', 79)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Paneer Cheese Corn Sandwich</span>
+                            <span class="item-price">₹89</span>
+                            <button class="add-btn" onclick="addItem('Paneer Cheese Corn Sandwich', 89)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Mexican Chicken Sandwich</span>
+                            <span class="item-price">₹79</span>
+                            <button class="add-btn" onclick="addItem('Mexican Chicken Sandwich', 79)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Peri Peri Chicken Sandwich</span>
+                            <span class="item-price">₹79</span>
+                            <button class="add-btn" onclick="addItem('Peri Peri Chicken Sandwich', 79)">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BURGER -->
+                <div class="menu-category">
+                    <h3 class="category-header">BURGER</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Classic Veg Burger</span>
+                            <span class="item-price">₹69</span>
+                            <button class="add-btn" onclick="addItem('Classic Veg Burger', 69)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Veg Cheese Burger</span>
+                            <span class="item-price">₹79</span>
+                            <button class="add-btn" onclick="addItem('Veg Cheese Burger', 79)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Classic Chicken Burger</span>
+                            <span class="item-price">₹79</span>
+                            <button class="add-btn" onclick="addItem('Classic Chicken Burger', 79)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken Cheese Burger</span>
+                            <span class="item-price">₹89</span>
+                            <button class="add-btn" onclick="addItem('Chicken Cheese Burger', 89)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Peri Peri Chicken Burger</span>
+                            <span class="item-price">₹89</span>
+                            <button class="add-btn" onclick="addItem('Peri Peri Chicken Burger', 89)">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MINI BURGER -->
+                <div class="menu-category">
+                    <h3 class="category-header">MINI BURGER (2pcs / 4pcs)</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Classic Veg Burger (2pcs)</span>
+                            <span class="item-price">₹59</span>
+                            <button class="add-btn" onclick="addItem('Classic Veg Burger (2pcs)', 59)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Classic Veg Burger (4pcs)</span>
+                            <span class="item-price">₹89</span>
+                            <button class="add-btn" onclick="addItem('Classic Veg Burger (4pcs)', 89)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Veg Cheese Burger (2pcs)</span>
+                            <span class="item-price">₹69</span>
+                            <button class="add-btn" onclick="addItem('Veg Cheese Burger (2pcs)', 69)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Veg Cheese Burger (4pcs)</span>
+                            <span class="item-price">₹99</span>
+                            <button class="add-btn" onclick="addItem('Veg Cheese Burger (4pcs)', 99)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Classic Chicken Burger (2pcs)</span>
+                            <span class="item-price">₹69</span>
+                            <button class="add-btn" onclick="addItem('Classic Chicken Burger (2pcs)', 69)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Classic Chicken Burger (4pcs)</span>
+                            <span class="item-price">₹99</span>
+                            <button class="add-btn" onclick="addItem('Classic Chicken Burger (4pcs)', 99)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken Cheese Burger (2pcs)</span>
+                            <span class="item-price">₹79</span>
+                            <button class="add-btn" onclick="addItem('Chicken Cheese Burger (2pcs)', 79)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken Cheese Burger (4pcs)</span>
+                            <span class="item-price">₹109</span>
+                            <button class="add-btn" onclick="addItem('Chicken Cheese Burger (4pcs)', 109)">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRIES -->
+                <div class="menu-category">
+                    <h3 class="category-header">FRIES</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">French Fries</span>
+                            <span class="item-price">₹49</span>
+                            <button class="add-btn" onclick="addItem('French Fries', 49)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Peri Peri French Fries</span>
+                            <span class="item-price">₹59</span>
+                            <button class="add-btn" onclick="addItem('Peri Peri French Fries', 59)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Veg Finger Strips (5pcs)</span>
+                            <span class="item-price">₹59</span>
+                            <button class="add-btn" onclick="addItem('Veg Finger Strips (5pcs)', 59)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken Popcorn (8pcs)</span>
+                            <span class="item-price">₹79</span>
+                            <button class="add-btn" onclick="addItem('Chicken Popcorn (8pcs)', 79)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken Nuggets (5pcs)</span>
+                            <span class="item-price">₹79</span>
+                            <button class="add-btn" onclick="addItem('Chicken Nuggets (5pcs)', 79)">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GARLIC BREAD -->
+                <div class="menu-category">
+                    <h3 class="category-header">GARLIC BREAD</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Garlic Bread</span>
+                            <span class="item-price">₹49</span>
+                            <button class="add-btn" onclick="addItem('Garlic Bread', 49)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Cheese Garlic Bread</span>
+                            <span class="item-price">₹69</span>
+                            <button class="add-btn" onclick="addItem('Cheese Garlic Bread', 69)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Rosemary Garlic Bread</span>
+                            <span class="item-price">₹79</span>
+                            <button class="add-btn" onclick="addItem('Rosemary Garlic Bread', 79)">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WAFFLES -->
+                <div class="menu-category">
+                    <h3 class="category-header">WAFFLES</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Vanilla Waffle</span>
+                            <span class="item-price">₹39</span>
+                            <button class="add-btn" onclick="addItem('Vanilla Waffle', 39)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Dark Chocolate Vanilla Waffle</span>
+                            <span class="item-price">₹59</span>
+                            <button class="add-btn" onclick="addItem('Dark Chocolate Vanilla Waffle', 59)">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- THATTU VADA SET -->
+                <div class="menu-category">
+                    <h3 class="category-header">THATTU VADA SET (5pcs)</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Chilly Thattu Vada Set</span>
+                            <span class="item-price">₹35</span>
+                            <button class="add-btn" onclick="addItem('Chilly Thattu Vada Set (5pcs)', 35)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Garlic Thattu Vada Set</span>
+                            <span class="item-price">₹45</span>
+                            <button class="add-btn" onclick="addItem('Garlic Thattu Vada Set (5pcs)', 45)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Gulkand Thattu Vada Set</span>
+                            <span class="item-price">₹45</span>
+                            <button class="add-btn" onclick="addItem('Gulkand Thattu Vada Set (5pcs)', 45)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Mayo Thattu Vada Set</span>
+                            <span class="item-price">₹45</span>
+                            <button class="add-btn" onclick="addItem('Mayo Thattu Vada Set (5pcs)', 45)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Egg Thattu Vada Set</span>
+                            <span class="item-price">₹55</span>
+                            <button class="add-btn" onclick="addItem('Egg Thattu Vada Set (5pcs)', 55)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Mixed Thattu Vada Set</span>
+                            <span class="item-price">₹50</span>
+                            <button class="add-btn" onclick="addItem('Mixed Thattu Vada Set (5pcs)', 50)">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOMOS -->
+                <div class="menu-category">
+                    <h3 class="category-header">MOMOS (5pcs)</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Mushroom Momos (Veg)</span>
+                            <span class="item-price">₹69</span>
+                            <button class="add-btn" onclick="addItem('Mushroom Momos (Veg)', 69)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Paneer Momos (Veg)</span>
+                            <span class="item-price">₹79</span>
+                            <button class="add-btn" onclick="addItem('Paneer Momos (Veg)', 79)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Cheese Corn Momos (Veg)</span>
+                            <span class="item-price">₹89</span>
+                            <button class="add-btn" onclick="addItem('Cheese Corn Momos (Veg)', 89)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken Momos</span>
+                            <span class="item-price">₹79</span>
+                            <button class="add-btn" onclick="addItem('Chicken Momos', 79)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Peri Peri Chicken Momos</span>
+                            <span class="item-price">₹89</span>
+                            <button class="add-btn" onclick="addItem('Peri Peri Chicken Momos', 89)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken Tikka Momos</span>
+                            <span class="item-price">₹89</span>
+                            <button class="add-btn" onclick="addItem('Chicken Tikka Momos', 89)">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NORUKALLS -->
+                <div class="menu-category">
+                    <h3 class="category-header">NORUKALLS</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Plain Norukalls</span>
+                            <span class="item-price">₹40</span>
+                            <button class="add-btn" onclick="addItem('Plain Norukalls', 40)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Garlic Norukalls</span>
+                            <span class="item-price">₹50</span>
+                            <button class="add-btn" onclick="addItem('Garlic Norukalls', 50)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Egg Sliced Norukalls</span>
+                            <span class="item-price">₹55</span>
+                            <button class="add-btn" onclick="addItem('Egg Sliced Norukalls', 55)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Scrambled Egg Norukalls</span>
+                            <span class="item-price">₹55</span>
+                            <button class="add-btn" onclick="addItem('Scrambled Egg Norukalls', 55)">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BROWNIES -->
+                <div class="menu-category">
+                    <h3 class="category-header">HOMEMADE BROWNIES</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Classic Brownies</span>
+                            <span class="item-price">₹49</span>
+                            <button class="add-btn" onclick="addItem('Classic Brownies', 49)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Double Chocolate Brownie</span>
+                            <span class="item-price">₹59</span>
+                            <button class="add-btn" onclick="addItem('Double Chocolate Brownie', 59)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Choco-chips Addon</span>
+                            <span class="item-price">₹10</span>
+                            <button class="add-btn" onclick="addItem('Choco-chips Addon', 10)">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOJITO -->
+                <div class="menu-category">
+                    <h3 class="category-header">MOJITO</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Mint Mojito</span>
+                            <span class="item-price">₹49</span>
+                            <button class="add-btn" onclick="addItem('Mint Mojito', 49)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Blue Curacao Mojito</span>
+                            <span class="item-price">₹69</span>
+                            <button class="add-btn" onclick="addItem('Blue Curacao Mojito', 69)">Add</button>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Strawberry Mojito</span>
+                            <span class="item-price">₹49</span>
+                            <button class="add-btn" onclick="addItem('Strawberry Mojito', 49)">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ADDONS -->
+                <div class="menu-category">
+                    <h3 class="category-header">ADDONS</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Extra Cheese</span>
+                            <span class="item-price">₹15</span>
+                            <button class="add-btn" onclick="addItem('Extra Cheese', 15)">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Billing Section -->
+            <div class="billing-section">
+                <h2>Order Summary</h2>
+                
+                <!-- Customer Information -->
+                <div class="customer-section">
+                    <h3>Customer Details</h3>
+                    <div class="customer-inputs">
+                        <label class="customer-input-label">
+                            Customer Name:
+                            <input type="text" id="customerName" placeholder="Enter customer name">
+                        </label>
+                        <label class="customer-input-label">
+                            Phone Number:
+                            <input type="tel" id="customerPhone" placeholder="Enter phone number" pattern="[0-9]{10}">
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="order-controls">
+                    <label>
+                        <input type="checkbox" id="packingCharge" onchange="calculateTotal()">
+                        Apply Packing Charge (₹5 per item)
+                    </label>
+                </div>
+                <div id="orderItems" class="order-items">
+                    <p class="empty-cart">No items added yet</p>
+                </div>
+                <div class="billing-summary">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">₹0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Packing Charge:</span>
+                        <span id="packingTotal">₹0</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Total:</span>
+                        <span id="total">₹0</span>
+                    </div>
+                </div>
+                
+                <!-- Payment Method Section -->
+                <div class="payment-section" id="paymentSection" style="display: none;">
+                    <h3>Payment Method</h3>
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="paymentMethod" value="cash" onchange="handlePaymentMethodChange()">
+                            <span>Cash</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="paymentMethod" value="upi" onchange="handlePaymentMethodChange()">
+                            <span>UPI</span>
+                        </label>
+                    </div>
+                    <div id="cashPayment" style="display: none;">
+                        <label class="cash-input-label">
+                            Amount Received:
+                            <input type="number" id="amountReceived" placeholder="Enter amount" min="0" step="1" oninput="calculateChange()">
+                        </label>
+                        <div class="summary-row change-row" id="changeDisplay" style="display: none;">
+                            <span>Change:</span>
+                            <span id="changeAmount">₹0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="billing-actions">
+                    <button class="btn btn-secondary" onclick="clearOrder()">Clear Order</button>
+                    <button class="btn btn-success" onclick="saveBillOnly()" id="saveBillBtn">Save Bill</button>
+                    <button class="btn btn-primary" onclick="processPayment()" id="processPaymentBtn" style="display: none;">Process Payment</button>
+                    <button class="btn btn-primary" onclick="printBill()">Print Bill</button>
+                </div>
+                
+                <!-- Data Export Section -->
+                <div class="export-section">
+                    <h3>Data Export</h3>
+                    <div class="export-buttons">
+                        <button class="btn btn-export" onclick="exportBillsToCSV()">Export Bills CSV</button>
+                        <button class="btn btn-export" onclick="exportEODToCSV()">Export EOD CSV</button>
+                        <button class="btn btn-export" onclick="exportAllDataToCSV()">Export All Data</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Edit Modal -->
+    <div id="menuEditModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Menu</h2>
+                <span class="close" onclick="closeMenuEdit()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="menuEditItems" class="menu-edit-list"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeMenuEdit()">Cancel</button>
+                <button class="btn btn-primary" onclick="saveMenuChanges()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- EOD Report Modal -->
+    <div id="eodModal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2>End of Day Report</h2>
+                <span class="close" onclick="closeEODReport()">&times;</span>
+            </div>
+            <div class="modal-tabs">
+                <button class="tab-btn active" onclick="switchTab('eod')">EOD Report</button>
+                <button class="tab-btn" onclick="switchTab('product')">Product Report</button>
+            </div>
+            <div class="modal-body">
+                <div id="eodReportContent"></div>
+                <div id="productReportContent" style="display: none;"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeEODReport()">Close</button>
+                <button class="btn btn-primary" onclick="printCurrentReport()" id="printReportBtn">Print Report</button>
+                <button class="btn btn-export" onclick="viewSavedCSV()">View Saved CSV</button>
+                <button class="btn btn-export" onclick="exportProductReport()" id="exportProductBtn" style="display: none;">Export Product CSV</button>
+                <button class="btn btn-danger" onclick="resetEOD()">Reset EOD</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
