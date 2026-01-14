@@ -67,7 +67,7 @@ header h1 {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 30px;
-    padding: 20px;
+    padding: 18px;
 }
 
 .menu-section {
@@ -159,7 +159,7 @@ header h1 {
     background: #28a745;
     color: white;
     border: none;
-    padding: 8px 20px;
+    padding: 8px 18px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
@@ -392,7 +392,7 @@ header h1 {
     text-align: center;
 }
 
-.remove-btn {
+/* .remove-btn {
     background: #dc3545;
     color: white;
     border: none;
@@ -401,15 +401,15 @@ header h1 {
     cursor: pointer;
     font-size: 0.9em;
     transition: background 0.3s;
-}
+} */
 
-.remove-btn:hover {
+/* .remove-btn:hover {
     background: #c82333;
-}
+} */
 
 .billing-summary {
     background: white;
-    padding: 20px;
+    padding: 18px;
     border-radius: 8px;
     margin-bottom: 20px;
 }
@@ -489,7 +489,7 @@ header h1 {
 
 .payment-section {
     background: white;
-    padding: 20px;
+    padding: 18px;
     border-radius: 8px;
     margin-bottom: 20px;
     border: 2px solid #e0e0e0;
@@ -511,7 +511,7 @@ header h1 {
     display: flex;
     align-items: center;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 8px 18px;
     background: #f8f9fa;
     border-radius: 8px;
     border: 2px solid #e0e0e0;
@@ -601,7 +601,7 @@ header h1 {
 }
 
 .modal-header {
-    padding: 10px 20px;
+    padding: 8px 18px;
     background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     color: white;
     border-radius: 10px 10px 0 0;
@@ -628,13 +628,13 @@ header h1 {
 }
 
 .modal-body {
-    padding: 20px;
+    padding: 18px;
     overflow-y: auto;
     flex: 1;
 }
 
 .modal-footer {
-    padding: 10px 20px;
+    padding: 8px 18px;
     background: #f8f9fa;
     border-radius: 0 0 10px 10px;
     display: flex;
@@ -686,7 +686,7 @@ header h1 {
 
 .eod-report {
     background: white;
-    padding: 20px;
+    padding: 18px;
     border-radius: 8px;
 }
 
@@ -700,7 +700,7 @@ header h1 {
 .eod-stat {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 20px;
+    padding: 18px;
     border-radius: 10px;
     text-align: center;
 }
@@ -806,7 +806,7 @@ header h1 {
 
 .tab-btn {
     flex: 1;
-    padding: 15px 20px;
+    padding: 11px 15px;
     background: transparent;
     border: none;
     border-bottom: 3px solid transparent;
@@ -857,7 +857,7 @@ header h1 {
 
 .product-report {
     background: white;
-    padding: 20px;
+    padding: 18px;
     border-radius: 8px;
 }
 
@@ -938,9 +938,9 @@ header h1 {
     .billing-actions,
     .add-btn,
     .quantity-controls,
-    .remove-btn {
+    /* .remove-btn {
         display: none;
-    }
+    } */
     
     .main-content {
         grid-template-columns: 1fr;
@@ -962,6 +962,7 @@ header h1 {
         max-height: none;
     }
 }
+
 
 
 
