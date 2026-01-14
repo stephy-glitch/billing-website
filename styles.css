@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 480px;
+    max-width: 9600px;
     margin: 0 auto;
     background: white;
     border-radius: 15px;
@@ -962,4 +962,5 @@ header h1 {
         max-height: none;
     }
 }
+
 
