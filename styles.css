@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0 auto;
     background: white;
     border-radius: 15px;
@@ -952,7 +952,7 @@ header h1 {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 480px) {
     .main-content {
         grid-template-columns: 1fr;
     }
@@ -962,6 +962,7 @@ header h1 {
         max-height: none;
     }
 }
+
 
 
 
